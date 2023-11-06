@@ -9,4 +9,4 @@ let coffee = {
 	}
 };
 
-export default coffee
+export default coffee;
