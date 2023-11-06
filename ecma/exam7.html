@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ECMAScript6</title>
+</head>
+<body>
+	<script>
+		let coffee = {
+			name : "Americano",
+			price : 3000
+		};
+
+		console.log("CASE1");
+		let {name, price} = coffee;
+		console.log(name);		
+		console.log(price);
+
+		console.log("CASE2");
+		let {name: coffeeName, price: coffeePrice} = coffee;		
+		console.log(coffeeName);		
+		console.log(coffeePrice);
+
+		console.log("CASE3");
+		let {name: coffeeName1, caffeine: coffeeCaffeine} = coffee;		
+		console.log(coffeeName1);		
+		console.log(coffeeCaffeine);
+
+		console.log("CASE4");
+		let {name: coffeeName2, caffeine: coffeeCaffeine1 = 500} = coffee;
+		console.log(coffeeName2);
+		console.log(coffeeCaffeine1);
+	</script>
+</body>
+</html>

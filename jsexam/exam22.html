@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<h1>Set과 Map 그리고 Spread 연산자</h1>
+	<hr>
+	<h3>자바스크립트 콘솔창에서 결과를 확인해 보세용~~</h3>
+	<script src="util.js"></script>
+	<script>
+		let ordersSet= new Set(['Pasta','Pizza','Coffee','Pasta','Pizza']);
+		console.log(ordersSet);  // {'Pasta', 'Pizza', 'Coffee'}
+		writeColor(ordersSet, 'h3', 'red');
+
+		ordersSet= new Set(['Pasta','Pizza','Coffee','Pasta','Pizza']);
+		console.log(ordersSet.has('Bread'));  //false
+
+		ordersSet= new Set(['Pasta','Pizza','Coffee','Pasta','Pizza']);
+		console.log(ordersSet);  // {'Pasta', 'Pizza', 'Coffee'}
+		console.log(ordersSet.add('Garlic Bread'));
+
+		ordersSet= new Set(['Pasta','Pizza','Coffee','Pasta','Pizza']);
+		console.log(ordersSet);  // {'Pasta', 'Pizza', 'Coffee'}
+		ordersSet.delete('Pizza')
+		console.log(ordersSet);
+
+		ordersSet= new Set(['Pasta','Pizza','Coffee','Pasta','Pizza']);
+		ordersSet.clear();
+		console.log(ordersSet); // {}
+
+		ordersSet= new Set(['Pasta','Pizza','Coffee','Pasta','Pizza']);
+		console.log(ordersSet);  // {'Pasta', 'Pizza', 'Coffee'}
+		console.log(ordersSet.size); //3
+		for(const order of ordersSet)
+			console.log(order);
+
+
+		const staff= ['Waiter','Chef','Waiter','Manager','Chef','Waiter'];
+		const staffUnique= new Set(staff);
+		console.log(staffUnique); // { 'Waiter','Chef','Manager'}
+
+		const ary=[...staffUnique];
+		console.log(ary);
+
+		console.log("================================");
+
+		const myMap= new Map();
+		myMap.set('name','둘리');
+		console.log(myMap);
+		myMap.set(1,'또치');
+		console.log(myMap);
+		myMap.set(2,'도우너');
+		console.log(myMap);
+		console.log(myMap.set(2,'마이콜'));
+
+		console.log(myMap.get('name'));
+		console.log(myMap.has('categories')); //false
+		console.log(myMap.delete(2));
+		console.log(myMap);
+		myMap.clear();
+		console.log(myMap); //{}
+		console.log(myMap.size);
+
+		console.log("================================");
+
+		let expPrice = [29, 39, 9, 114] 
+		console.log (Math.min(...expPrice)) // 9  
+		console.log (Math.min(expPrice))
+
+		let array1 = [3, 5, -10];
+		let array2 = [6, 2, -7, 3, 5];
+		console.log(Math.max(3, ...array1, 10, ...array2, 11));    // 11
+
+		let fruits = ["apple", "mango", "pineapple"];
+		let allFruits = ["grapes", ...fruits, "strawberry"];
+
+		console.log(allFruits);    // ["grapes", "apple", "mango", "pineapple", "strawberry"]
+
+		let testArr='korea';
+		console.log(...testArr);   //k o r e a 로 출력됨
+		console.log([...testArr]); //배열이 됨 ['k','o','r','e','a']
+		console.log([..."hello"]); //[ 'h', 'e', 'l', 'l', 'o' ]
+	</script>
+</body>
+</html>
+
+
+
+
+

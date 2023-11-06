@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<h1>화살표 함수를 리턴하는 예제</h1>
+	<hr>
+	<script src="util.js"></script>
+	<script>
+		function action(type) {
+			if (type == "add")
+				return (a, b) => {
+					write(a + b, "h2");
+				}
+			else if (type == "sub")
+				return (a, b) => 
+					write(a - b, "h2");				
+			else
+				return (a, b) => write(a * b, "h2");				
+		}
+		action("add")(10, 20);
+		action("sub")(10, 20);
+		action("")(10, 20);
+	</script>
+</body>
+</html>

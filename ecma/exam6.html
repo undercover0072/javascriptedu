@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ECMAScript6</title>
+</head>
+<body>
+	<script>
+		let str = "가나다라마";
+		
+		for(let ch of str) {
+			console.log(ch);
+		}
+		let ary = [...str];
+		console.log(ary);
+		const [c1, c2] = str;		
+		const [c3, c4, ...c5] = str;
+		console.log(c1);
+		console.log(c2);
+		console.log("=".repeat(50));
+		console.log(c3);
+		console.log(c4);
+		console.log(c5);
+	</script>
+</body>
+</html>
