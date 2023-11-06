@@ -64,7 +64,7 @@
         regDate: '2020-05-25T09:00'
       }).then(response => {
         if (!response.ok) throw new Error(response.statusText);
-          return response.text();
+          return response.text(); //일반 응답일 경우 텍스트
       })
       .then(msg => console.log(msg))
       .catch(err => console.error(err));
